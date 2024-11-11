@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0FAB6E1-311F-4673-9715-A4C636D0143A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CarageMS</RootNamespace>
+    <AssemblyName>CarageMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\AnalysisController.cs" />
+    <Compile Include="Controller\BillController.cs" />
+    <Compile Include="Controller\CarController.cs" />
+    <Compile Include="Controller\EmployeeController.cs" />
+    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\MainController.cs" />
+    <Compile Include="Controller\StockController.cs" />
+    <Compile Include="DBCarageMsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBCarageMsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBCarageMsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBCarageMsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBCarageMsDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBCarageMsDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBCarageMsDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBCarageMsDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Bills.cs" />
+    <Compile Include="Model\Cars.cs" />
+    <Compile Include="Model\DBCarageMs.cs" />
+    <Compile Include="Model\Employees.cs" />
+    <Compile Include="Model\Stocks.cs" />
+    <Compile Include="Model\tbBills.cs" />
+    <Compile Include="Model\tbCars.cs" />
+    <Compile Include="Model\tbEmployees.cs" />
+    <Compile Include="Model\tbStocks.cs" />
+    <Compile Include="View\CtrlAnalysis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CtrlAnalysis.Designer.cs">
+      <DependentUpon>CtrlAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CtrlBilling.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CtrlBilling.Designer.cs">
+      <DependentUpon>CtrlBilling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ctrlCar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ctrlCar.Designer.cs">
+      <DependentUpon>ctrlCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ctrlEmployees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ctrlEmployees.Designer.cs">
+      <DependentUpon>ctrlEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ctrlStock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ctrlStock.Designer.cs">
+      <DependentUpon>ctrlStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\CtrlAnalysis.resx">
+      <DependentUpon>CtrlAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CtrlBilling.resx">
+      <DependentUpon>CtrlBilling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ctrlCar.resx">
+      <DependentUpon>ctrlCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ctrlEmployees.resx">
+      <DependentUpon>ctrlEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ctrlStock.resx">
+      <DependentUpon>ctrlStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DBCarageMsDataSet.xsc">
+      <DependentUpon>DBCarageMsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBCarageMsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBCarageMsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBCarageMsDataSet.xss">
+      <DependentUpon>DBCarageMsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBCarageMsDataSet1.xsc">
+      <DependentUpon>DBCarageMsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DBCarageMsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBCarageMsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBCarageMsDataSet1.xss">
+      <DependentUpon>DBCarageMsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DBCarageMsDataSet2.xsc">
+      <DependentUpon>DBCarageMsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DBCarageMsDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBCarageMsDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBCarageMsDataSet2.xss">
+      <DependentUpon>DBCarageMsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DBCarageMsDataSet3.xsc">
+      <DependentUpon>DBCarageMsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DBCarageMsDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBCarageMsDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBCarageMsDataSet3.xss">
+      <DependentUpon>DBCarageMsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\Employee.png" />
+    <Content Include="Images\Menu.png" />
+    <None Include="Resources\employee.png" />
+    <None Include="Resources\car1.png" />
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DBCarageMsDataSet3" targetNamespace="http://tempuri.org/DBCarageMsDataSet3.xsd" xmlns:mstns="http://tempuri.org/DBCarageMsDataSet3.xsd" xmlns="http://tempuri.org/DBCarageMsDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DBCarageMsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DBCarageMsConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CarageMS.Properties.Settings.GlobalReference.Default.DBCarageMsConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbCarsTableAdapter" GeneratorDataComponentClassName="tbCarsTableAdapter" Name="tbCars" UserDataComponentName="tbCarsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DBCarageMsConnectionString (Settings)" DbObjectName="DBCarageMs.dbo.tbCars" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CarNumber FROM dbo.tbCars</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CarNumber" DataSetColumn="CarNumber" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DBCarageMsDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="DBCarageMsDataSet3" msprop:Generator_DataSetName="DBCarageMsDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbCars" msprop:Generator_RowEvHandlerName="tbCarsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbCarsRowDeleted" msprop:Generator_RowDeletingName="tbCarsRowDeleting" msprop:Generator_RowEvArgName="tbCarsRowChangeEvent" msprop:Generator_TablePropName="tbCars" msprop:Generator_RowChangedName="tbCarsRowChanged" msprop:Generator_RowChangingName="tbCarsRowChanging" msprop:Generator_TableClassName="tbCarsDataTable" msprop:Generator_RowClassName="tbCarsRow" msprop:Generator_TableVarName="tabletbCars" msprop:Generator_UserTableName="tbCars">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CarNumber" msprop:Generator_ColumnPropNameInRow="CarNumber" msprop:Generator_ColumnPropNameInTable="CarNumberColumn" msprop:Generator_ColumnVarNameInTable="columnCarNumber" msprop:Generator_UserColumnName="CarNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
